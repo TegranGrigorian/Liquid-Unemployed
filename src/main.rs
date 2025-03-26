@@ -12,12 +12,12 @@ fn main() -> eframe::Result<()> {
     let native_options = eframe::NativeOptions {
         viewport: egui::ViewportBuilder::default()
             .with_inner_size([1200.0, 800.0])
-            .with_title("CAD-like 3D Editor"),
+            .with_title("Liquid-Unemployed"),
         ..Default::default()
     };
     
     eframe::run_native(
-        "3D CAD Example",
+        "Liquid-Unemployed",
         native_options,
         Box::new(|cc| Ok(Box::new(CadApp::new(cc)))),
     )
