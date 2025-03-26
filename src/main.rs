@@ -4,11 +4,21 @@
 #[warn(dead_code)]
 
 //imports
-use Liquid_Unemployed::Examples::example_app::run;
-
+// use Liquid_Unemployed::Examples::example_app::run;
+use Liquid_Unemployed::gui_example::CadApp;
+use eframe;
 //main
-fn main() {
-    if let Err(e) = run() {
-        println!("Application error: {}", e);
-    }
+fn main() -> eframe::Result<()> {
+    let native_options = eframe::NativeOptions {
+        viewport: egui::ViewportBuilder::default()
+            .with_inner_size([1200.0, 800.0])
+            .with_title("CAD-like 3D Editor"),
+        ..Default::default()
+    };
+    
+    eframe::run_native(
+        "3D CAD Example",
+        native_options,
+        Box::new(|cc| Ok(Box::new(CadApp::new(cc)))),
+    )
 }
