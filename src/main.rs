@@ -6,7 +6,8 @@
 //imports
 // use Liquid_Unemployed::Examples::example_app::run;
 use Liquid_Unemployed::gui_example::CadApp;
-use eframe;
+use eframe; //create a frame u idito
+
 //main
 fn main() -> eframe::Result<()> {
     let native_options = eframe::NativeOptions {

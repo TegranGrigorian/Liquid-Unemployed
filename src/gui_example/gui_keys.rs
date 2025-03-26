@@ -1,5 +1,6 @@
 use egui::Context;
 
+//hey is this code form someones github? yes stfu im lazy and need to see if my view math code works so fuck you
 #[derive(Default)]
 pub struct ControlPanel {
     grid: bool,
@@ -8,10 +9,10 @@ pub struct ControlPanel {
 
 impl ControlPanel {
     pub fn show(&mut self, ctp: &Context) {
-        egui::SidePanel::left("controls_panel")
+        egui::SidePanel::left("Shitter Panel")
         .resizable(false)
         .show(ctp, |ui| {
-            ui.heading("3D Controls");
+            ui.heading("Controls im too lazy to program");
             ui.separator();
             
             ui.checkbox(&mut self.grid, "Show Grid");
@@ -19,6 +20,7 @@ impl ControlPanel {
             
             ui.separator();
             if ui.button("Reset View").clicked() {
+                println!("lmao get fucked u though this was gonna do shit loser");
                 //ur fucked
             }
         }); //one function btw

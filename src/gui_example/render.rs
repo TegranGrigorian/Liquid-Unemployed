@@ -1,5 +1,12 @@
 use super::view_math::CameraState;
 
+
+
+//HAHAHAHAHA U THOUGHT I WAS GOING TO MAKE A RENDER ENGINE BY SCRATCH
+/*
+yeah helll no im going to steal one online, once i find one. I cant find one so for now everything looks liek shit womp womp bitch cry about it
+also stop looking at the code u weirdo
+*/
 pub struct Renderer3D;
 
 impl Renderer3D {

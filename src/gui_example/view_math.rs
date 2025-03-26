@@ -1,7 +1,7 @@
 use egui::{Ui, Pos2, Vec2, Response};
 use std::collections::VecDeque;
 
-// Define our own Pos3 since egui doesn't provide it
+//define our own Pos3 since egui is a bum
 #[derive(Debug, Clone, Copy)]
 pub struct Pos3 {
     pub x: f32,
@@ -11,14 +11,18 @@ pub struct Pos3 {
 
 impl Pos3 {
     pub fn new(x: f32, y: f32, z: f32) -> Self {
-        Self { x, y, z }
+        Self { 
+            x, 
+            y, 
+            z 
+        }
     }
 }
 
 pub struct View3d {
     camera: CameraState,
     drawing: VecDeque<Pos3>,
-    last_mouse_pos: Pos2,
+    last_mouse_pos: Pos2, //lmao i never made camera movement code, idc stfu
 }
 
 impl View3d {
@@ -30,6 +34,7 @@ impl View3d {
         }
     }
 
+    //NIGHTMARE I HATE RUSTS BORROW CHECKER WHY DIDNT I DO THIS IN C FUCKE MEEEEE
     fn handle_interaction(&mut self, response: &mut Response) { //we wnat to make the Response struct mutable
         if response.dragged() {
             let delta = response.drag_delta();
@@ -69,6 +74,7 @@ impl View3d {
     }
 }
 
+//I really want to name these varibels and instances something dumb but ill be a nice boy
 #[derive(Default)]
 pub struct CameraState {
     x_rotation: f64,

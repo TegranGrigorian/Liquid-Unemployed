@@ -1,4 +1,4 @@
-//error checking for all the other classes
+//Cad App instnace to hav eone orginzied place where the different submethods manipulate the window
 use egui::Context;
 use crate::gui_example::{View3d, ControlPanel};
 
