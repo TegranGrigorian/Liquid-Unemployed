@@ -4,9 +4,11 @@
 #[warn(dead_code)]
 
 //imports
-use Liquid_Unemployed::example_app;
+use Liquid_Unemployed::Examples::example_app::run;
 
 //main
 fn main() {
-    example_app::run();
+    if let Err(e) = run() {
+        println!("Application error: {}", e);
+    }
 }
